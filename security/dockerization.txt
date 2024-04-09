@@ -1,0 +1,25 @@
+how_to_run_application_with_docker
+
+
+progress data base setup
+
+
+1: docker pull from docker hub
+
+command : docker pull postgres:16.2
+
+2: container run
+command : docker run --name postgresdb -e POSTGRES_DB=avs -e POSTGRES_USER=postgres -e POSTGRES_PASSWORD=postgress!209206 -p 5434:5432 -d postgres:16.2
+
+3: pull application image from docker hub
+
+command: docker pull captainambar/avs-security:v1.0
+
+4: run the application in interactive mode
+command:  docker run -it -p 8080:8080 --name mysecurityapp captainambar/avs-security:v1.0
+   run as background process
+command :  docker run -d -p 8080:8080 --name mysecurityapp captainambar/avs-security:v1.0
+
+
+
+
